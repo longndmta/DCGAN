@@ -35,7 +35,7 @@ def train(batch_size, epoch_num):
             image_blur_batch = x_train[index * batch_size:(index + 1) * batch_size]
             
             image_full_batch = y_train[index * batch_size:(index + 1) * batch_size]
-            print('full ',image_blur_batch)
+            #print('full ',image_blur_batch)
             generated_images = g.predict(x=image_blur_batch, batch_size=batch_size)
             #print('generated_images ', generated_images)
             # output generated images for each 30 iters
