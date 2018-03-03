@@ -28,7 +28,7 @@ def build_hdf5(jpeg_dir, size=256):
 		for data_type in tqdm(['sharp', 'blur'], desc = 'create HDF5 dataset from images'):
 			data_path = jpeg_dir + '/%s/*.jpg' % data_type
 			images_path = gb.glob(data_path)
-			images_paths.sort()
+			images_path.sort()
 			#print(images_path)
 			for image_path in images_path:
 				if data_type == 'sharp':
@@ -42,7 +42,7 @@ def build_hdf5(jpeg_dir, size=256):
 
 			data_path = jpeg_dir + '/%s/*.png' % data_type
 			images_path = gb.glob(data_path)
-			images_paths.sort()
+			images_path.sort()
 			#print(images_path)
 			for image_path in images_path:
 				if data_type == 'sharp':
